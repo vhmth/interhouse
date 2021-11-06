@@ -4,8 +4,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "prettier --write '**/*.js'",
-    "dev": "next -p 4444",
-    "build": "next build"
+    "dev": "next -p 4444"
   },
   "pre-commit": "lint",
   "prettier": {
