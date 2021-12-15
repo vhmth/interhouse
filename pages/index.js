@@ -1,6 +1,15 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react';
 
 export default function() {
+  let [fresh, setFresh] = useState('');
+
+  useEffect(() => {
+    if (window.location.search || ''.indexOf('?fresh') === 0) {
+      setFresh('?fresh');
+    }
+  }, []);
+
   return (
     <>
       <Head>
@@ -63,7 +72,7 @@ export default function() {
           paddingBottom: '52.785923753665685%',
           height: 0
         } } >
-          <iframe loading="lazy" src="https://www.loom.com/embed/5815b026ce064248909a3ec4be0d82a3" frameBorder="0" allowFullScreen style={ {
+          <iframe loading="lazy" src={ `https://www.loom.com/embed/5815b026ce064248909a3ec4be0d82a3${fresh}` } frameBorder="0" allowFullScreen style={ {
             position: 'absolute',
             top: 0,
             left: 0,
@@ -77,7 +86,7 @@ export default function() {
           paddingBottom: '51.77372962607861%',
           height: 0
         } } >
-          <iframe loading="lazy" src="https://www.loom.com/embed/4da94e0fd8654cc183bd5760c07eecc2" frameBorder="0" allowFullScreen style={ {
+          <iframe loading="lazy" src= { `https://www.loom.com/embed/4da94e0fd8654cc183bd5760c07eecc2${fresh}` } frameBorder="0" allowFullScreen style={ {
             position: 'absolute',
             top: 0,
             left: 0,
@@ -91,7 +100,7 @@ export default function() {
           paddingBottom: '62.5%',
           height: 0
         } } >
-          <iframe loading="lazy" src="https://www.loom.com/embed/70ef16bf3e044389815e539685edd401" frameBorder="0" allowFullScreen style={ {
+          <iframe loading="lazy" src={ `https://www.loom.com/embed/70ef16bf3e044389815e539685edd401${fresh}` } frameBorder="0" allowFullScreen style={ {
             position: 'absolute',
             top: 0,
             left: 0,
@@ -105,7 +114,7 @@ export default function() {
           paddingBottom: '62.5%',
           height: 0
         } } >
-          <iframe loading="lazy" src="https://www.loom.com/embed/df31eb35d10b49abbc5323f503a7afec" frameBorder="0" allowFullScreen style={ {
+          <iframe loading="lazy" src={ `https://www.loom.com/embed/df31eb35d10b49abbc5323f503a7afec${fresh}` } frameBorder="0" allowFullScreen style={ {
             position: 'absolute',
             top: 0,
             left: 0,
